@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- TEMPLATE: copy to apps/<app-slug>/privacy/index.html and replace
+       every {{PLACEHOLDER}} before publishing. -->
+  <title>{{APP_NAME}} — Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #12100e; --text: #ece7df; --muted: #a39b8d;
+      --accent: #e8a33d; --border: #2e2a24;
+      color-scheme: dark;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #faf7f2; --text: #26221c; --muted: #6f6759;
+        --accent: #b3731a; --border: #e5ded2;
+        color-scheme: light;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.7;
+    }
+    main { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    h1 { font-size: 1.8rem; letter-spacing: -0.01em; }
+    .meta { color: var(--muted); margin: 0.5rem 0 2.5rem; font-size: 0.9rem; }
+    h2 { font-size: 1.2rem; margin: 2rem 0 0.75rem; }
+    p, li { color: var(--muted); }
+    ul { padding-left: 1.25rem; margin: 0.5rem 0 1rem; }
+    a { color: var(--accent); }
+    strong { color: var(--text); }
+    footer {
+      max-width: 720px; margin: 0 auto; padding: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted); font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>{{APP_NAME}} — Privacy Policy</h1>
+  <p class="meta">Effective date: {{EFFECTIVE_DATE}} · The Scavengers Software LLC</p>
+
+  <p>This privacy policy describes how {{APP_NAME}} ("the app"), published by
+  The Scavengers Software LLC ("we", "us"), collects, uses, and protects your
+  information.</p>
+
+  <h2>Information we collect</h2>
+  <!-- Keep only the bullets that apply. What you state here MUST match your
+       Google Play Data Safety form and Apple App Privacy answers. -->
+  <ul>
+    <li><strong>Account information:</strong> {{e.g. email address, display name — or delete}}</li>
+    <li><strong>Usage and diagnostics:</strong> {{e.g. crash logs and anonymized analytics via Firebase — or delete}}</li>
+    <li><strong>Device information:</strong> {{e.g. device model and OS version for diagnostics — or delete}}</li>
+  </ul>
+  <p>If the app collects no data, replace the list above with: <em>{{APP_NAME}}
+  does not collect, store, or transmit any personal information. All data stays
+  on your device.</em></p>
+
+  <h2>How we use information</h2>
+  <p>{{Describe purposes: providing app functionality, fixing crashes,
+  improving features. State that data is never sold.}}</p>
+
+  <h2>Third-party services</h2>
+  <p>{{List SDKs/services that receive data (e.g. Firebase Crashlytics, Google
+  Play Services) and link to their privacy policies — or state that none are
+  used.}}</p>
+
+  <h2>Data retention and deletion</h2>
+  <p>{{How long data is kept and how a user can request deletion. Google Play
+  requires a deletion path if accounts can be created.}}</p>
+
+  <h2>Children's privacy</h2>
+  <p>The app is not directed at children under 13, and we do not knowingly
+  collect personal information from children.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>We may update this policy from time to time. Changes will be posted on
+  this page with an updated effective date.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy? Email
+  <a href="mailto:drew@thescavengers.software">drew@thescavengers.software</a>.</p>
+</main>
+<footer>© 2026 The Scavengers Software LLC · <a href="/">thescavengers.software</a></footer>
+</body>
+</html>

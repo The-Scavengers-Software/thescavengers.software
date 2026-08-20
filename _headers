@@ -1,0 +1,8 @@
+# Cloudflare Pages / Netlify header rules (ignored by GitHub Pages).
+# Apple requires the AASA file to be served as application/json.
+/.well-known/apple-app-site-association
+  Content-Type: application/json
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin

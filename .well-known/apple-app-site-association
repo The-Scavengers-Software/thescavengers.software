@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["TEAMID.software.thescavengers.exampleapp"],
+        "components": [
+          { "/": "/apps/*", "comment": "Match app deep links" }
+        ]
+      }
+    ]
+  }
+}
