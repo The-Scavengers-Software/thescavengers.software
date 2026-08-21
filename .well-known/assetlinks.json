@@ -3,9 +3,9 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "software.thescavengers.exampleapp",
+      "package_name": "app.campfire.android",
       "sha256_cert_fingerprints": [
-        "REPLACE:WITH:YOUR:APP:SIGNING:CERT:SHA256:FINGERPRINT"
+        "4A:3B:E9:0F:83:BD:CA:A6:65:D8:11:D6:CD:E7:6A:4E:7E:0B:BB:48:96:0C:BB:78:7B:9A:C1:E4:06:56:82:9A"
       ]
     }
   }
