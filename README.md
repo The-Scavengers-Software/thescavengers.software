@@ -8,12 +8,13 @@ privacy policies, and app-store verification files.
 ```
 index.html                        Landing page
 privacy/index.html                Company/site privacy page
-apps/<app-slug>/                  One folder per app
-  index.html                        App landing page (optional)
-  privacy/index.html                App privacy policy (link this in Play/App Store)
-templates/privacy-policy.html     Copy this for each new app's policy
+<app-slug>/                       One folder per app (see campfire/)
+  privacy.html                      App privacy policy (link this in Play/App Store)
+  terms.html                        App terms & conditions
+  icon.png                          App icon for the page top bar (192px)
+templates/privacy-policy.html     Policy content skeleton for a new app
 .well-known/
-  assetlinks.json                 Android App Links + Play verification (replace placeholders)
+  assetlinks.json                 Android App Links + Play verification
   apple-app-site-association      iOS Universal Links (replace TEAMID/bundle id)
 _headers                          Cloudflare Pages/Netlify headers (AASA content-type)
 CNAME                             Custom domain for GitHub Pages
@@ -22,13 +23,14 @@ CNAME                             Custom domain for GitHub Pages
 
 ## Adding a new app
 
-1. `mkdir -p apps/<app-slug>/privacy`
-2. Copy `templates/privacy-policy.html` to `apps/<app-slug>/privacy/index.html`
-   and fill in every `{{PLACEHOLDER}}` (keep it consistent with your Play Data
-   Safety form / Apple App Privacy answers).
-3. Use `https://thescavengers.software/apps/<app-slug>/privacy/` as the privacy
+1. Copy the `campfire/` folder to `<app-slug>/` and swap the name, icon
+   (`sips -z 192 192 <launcher>.png --out <app-slug>/icon.png`), and content —
+   `templates/privacy-policy.html` has a policy skeleton if you're writing one
+   from scratch. Keep the policy consistent with your Play Data Safety form /
+   Apple App Privacy answers.
+2. Use `https://thescavengers.software/<app-slug>/privacy.html` as the privacy
    policy URL in the store listing.
-4. For Android App Links, append the app's entry (package name + SHA-256 of the
+3. For Android App Links, append the app's entry (package name + SHA-256 of the
    Play App Signing cert, from Play Console → Setup → App signing) to
    `.well-known/assetlinks.json`.
 
