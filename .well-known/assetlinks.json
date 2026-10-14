@@ -5,6 +5,17 @@
       "namespace": "android_app",
       "package_name": "app.campfire.android",
       "sha256_cert_fingerprints": [
+        "BB:04:56:36:A9:52:BC:99:9E:33:22:A3:B0:50:B5:5F:C9:D7:19:52:BA:2E:AF:22:0B:E5:BD:A2:9A:A6:E6:23",
+        "4A:3B:E9:0F:83:BD:CA:A6:65:D8:11:D6:CD:E7:6A:4E:7E:0B:BB:48:96:0C:BB:78:7B:9A:C1:E4:06:56:82:9A"
+      ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.campfire.android.alpha",
+      "sha256_cert_fingerprints": [
         "4A:3B:E9:0F:83:BD:CA:A6:65:D8:11:D6:CD:E7:6A:4E:7E:0B:BB:48:96:0C:BB:78:7B:9A:C1:E4:06:56:82:9A"
       ]
     }
