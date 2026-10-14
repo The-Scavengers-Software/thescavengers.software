@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-BSHIA8uyEksveTZNsWDdE7q9p6Oqa/LdAOuySBi6RJg='; style-src 'sha256-zulNUSTC9mSQ5x0iZvcS7Jrt4SVpF5/dVREgnE+OhcU='; img-src 'self'; base-uri 'none'; form-action 'none'">
+  <script>history.replaceState(null, '', location.pathname);</script>
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campfire — Set up</title>
+  <meta name="description" content="Opens Campfire, an unofficial Audiobookshelf client by The Scavenger's Software LLC, to set up a server.">
+  <link rel="icon" href="icon.png">
+  <style>
+    :root {
+      --bg: #12100e; --bg-raised: #1c1916; --text: #ece7df; --muted: #a39b8d;
+      --accent: #e8a33d; --border: #2e2a24;
+      color-scheme: dark;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #faf7f2; --bg-raised: #ffffff; --text: #26221c; --muted: #6f6759;
+        --accent: #b3731a; --border: #e5ded2;
+        color-scheme: light;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.7;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 1.5rem;
+    }
+    header .bar {
+      max-width: 720px; margin: 0 auto;
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    header img {
+      width: 36px; height: 36px; border-radius: 9px; flex: none;
+    }
+    header .name { font-weight: 700; font-size: 1.15rem; letter-spacing: 0.01em; }
+    header .by {
+      margin-left: auto; color: var(--muted); font-size: 0.85rem;
+      text-decoration: none;
+    }
+    header .by:hover { color: var(--accent); }
+    main { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    h1 { font-size: 1.8rem; letter-spacing: -0.01em; margin-bottom: 1rem; }
+    h2 { font-size: 1.2rem; margin: 2rem 0 0.75rem; }
+    p, li { color: var(--muted); }
+    p { margin-bottom: 1rem; }
+    ol { padding-left: 1.25rem; margin: 0.5rem 0 1rem; }
+    a { color: var(--accent); }
+    strong { color: var(--text); }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.25rem 0 1rem; }
+    .actions a {
+      display: inline-block; padding: 0.6rem 1.1rem; border-radius: 8px;
+      font-weight: 600; text-decoration: none;
+    }
+    .actions .primary { background: var(--accent); color: var(--bg); }
+    .actions .secondary { border: 1px solid var(--border); background: var(--bg-raised); color: var(--text); }
+    .note {
+      border: 1px solid var(--border); background: var(--bg-raised);
+      border-radius: 10px; padding: 1rem 1.25rem; margin-top: 2.5rem;
+    }
+    .note p { margin: 0; font-size: 0.9rem; }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem; color: var(--muted); font-size: 0.85rem;
+    }
+    footer .bar {
+      max-width: 720px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem;
+    }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <img src="icon.png" alt="Campfire logo">
+    <span class="name">Campfire</span>
+    <a class="by" href="/">by The Scavenger's Software</a>
+  </div>
+</header>
+
+<main>
+  <h1>Set up Campfire</h1>
+  <p>This link sets up <strong>Campfire</strong>, an app for listening to your
+  Audiobookshelf server, so it can connect to a server in one tap. It's meant
+  to open straight in the Campfire app on Android.</p>
+  <p>If you're seeing this page, Campfire isn't installed on this device, or it
+  couldn't open the link.</p>
+
+  <h2>Get Campfire</h2>
+  <div class="actions">
+    <a class="primary" href="https://play.google.com/store/apps/details?id=app.campfire.android">Get it on Google Play</a>
+    <a class="secondary" href="https://github.com/r0adkll/Campfire/releases/latest">Download from GitHub</a>
+  </div>
+  <p>Once Campfire is installed, go back and tap the link again. If it still
+  opens this page, update Campfire to the latest version and try again.</p>
+
+  <h2>Or set it up yourself</h2>
+  <p>You can enter the same details by hand in Campfire's sign-in screen:</p>
+  <ol>
+    <li>Enter the server address you were given.</li>
+    <li>When Campfire says the server is protected by Cloudflare Access, tap
+    <strong>Add service token</strong>.</li>
+    <li>Enter the <strong>Client ID</strong> and <strong>Client Secret</strong>
+    from your server's admin, then sign in.</li>
+  </ol>
+
+  <div class="note">
+    <p>The setup details in this link are only meant for the Campfire app.
+    They travel in the part of the link after the <code>#</code>, which your
+    browser never sends to this website, and this page removes them from the
+    address bar as soon as it opens. It doesn't read, show, or keep them.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="bar">
+    <span>© 2026 The Scavenger's Software LLC</span>
+    <span><a href="/campfire/privacy.html">Privacy Policy</a> · <a href="/campfire/terms.html">Terms &amp; Conditions</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -6,3 +6,16 @@
 /*
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
+
+# Campfire setup links carry a server and a Cloudflare Access service token in the URL
+# fragment. The landing page loads nothing from other origins and runs only its own inline
+# script, which strips the fragment. Referrer-Policy joins the /* value; the last token wins.
+/campfire/connect
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-BSHIA8uyEksveTZNsWDdE7q9p6Oqa/LdAOuySBi6RJg='; style-src 'sha256-zulNUSTC9mSQ5x0iZvcS7Jrt4SVpF5/dVREgnE+OhcU='; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+  Referrer-Policy: no-referrer
+  X-Robots-Tag: noindex
+
+/campfire/connect.html
+  Content-Security-Policy: default-src 'none'; script-src 'sha256-BSHIA8uyEksveTZNsWDdE7q9p6Oqa/LdAOuySBi6RJg='; style-src 'sha256-zulNUSTC9mSQ5x0iZvcS7Jrt4SVpF5/dVREgnE+OhcU='; img-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+  Referrer-Policy: no-referrer
+  X-Robots-Tag: noindex
