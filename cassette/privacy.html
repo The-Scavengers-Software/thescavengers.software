@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cassette — Privacy Policy</title>
+  <meta name="description" content="Privacy policy for Cassette, an unofficial battery monitor for SRAM AXS components by The Scavenger's Software LLC.">
+  <link rel="icon" href="icon.png">
+  <style>
+    :root {
+      --bg: #12100e; --bg-raised: #1c1916; --text: #ece7df; --muted: #a39b8d;
+      --accent: #e8a33d; --border: #2e2a24;
+      color-scheme: dark;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #faf7f2; --bg-raised: #ffffff; --text: #26221c; --muted: #6f6759;
+        --accent: #b3731a; --border: #e5ded2;
+        color-scheme: light;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--bg); color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.7;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 1.5rem;
+    }
+    header .bar {
+      max-width: 720px; margin: 0 auto;
+      display: flex; align-items: center; gap: 0.75rem;
+    }
+    header img {
+      width: 36px; height: 36px; border-radius: 9px; flex: none;
+    }
+    header .name { font-weight: 700; font-size: 1.15rem; letter-spacing: 0.01em; }
+    header .by {
+      margin-left: auto; color: var(--muted); font-size: 0.85rem;
+      text-decoration: none;
+    }
+    header .by:hover { color: var(--accent); }
+    main { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+    h1 { font-size: 1.8rem; letter-spacing: -0.01em; }
+    .meta { color: var(--muted); margin: 0.5rem 0 2.5rem; font-size: 0.9rem; }
+    h2 { font-size: 1.2rem; margin: 2rem 0 0.75rem; }
+    p, li { color: var(--muted); }
+    p { margin-bottom: 1rem; }
+    ul { padding-left: 1.25rem; margin: 0.5rem 0 1rem; }
+    a { color: var(--accent); }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem; color: var(--muted); font-size: 0.85rem;
+    }
+    footer .bar {
+      max-width: 720px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem;
+    }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <img src="icon.png" alt="Cassette logo">
+    <span class="name">Cassette</span>
+    <a class="by" href="/">by The Scavenger's Software</a>
+  </div>
+</header>
+
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Effective as of 2026-10-18</p>
+
+  <p>This privacy policy applies to the Cassette app for Android, Wear OS and
+  iOS (hereby referred to as "Application"), created by The Scavenger's
+  Software LLC (hereby referred to as "Service Provider") as an Open Source
+  service. The Application is an unofficial battery monitor for SRAM AXS bike
+  components and is not affiliated with or endorsed by SRAM. It is provided
+  "AS IS".</p>
+
+  <p>In short: the Application has no accounts, no ads, no analytics and no
+  crash reporting. Everything it learns about your bikes stays on your
+  devices.</p>
+
+  <h2>What the Application reads</h2>
+  <p>The Application uses Bluetooth to listen for the broadcasts that AXS
+  components and power meters send when the bike wakes, and connects to them
+  briefly to read their battery levels and system tables. It does this in the
+  background only if you turn background capture on, and you can turn it off
+  in Settings at any time.</p>
+  <p>The Application does not use your location. On Android, its Bluetooth
+  permission is declared so that scans are never used to derive location; on
+  iOS, it does not ask for Location access.</p>
+
+  <h2>What the Application stores</h2>
+  <p>On your phone, the Application stores:</p>
+  <ul>
+    <li>the bikes you add: their names, types and optional photos (cropped and
+    resized on the device, never uploaded);</li>
+    <li>each component's identity as the component reports it (serial number,
+    model and firmware), and its battery readings over time (kept for a year);</li>
+    <li>your settings;</li>
+    <li>diagnostic records: raw Bluetooth bytes from your components and from
+    nearby devices that look like SRAM components, so that problems with the
+    reverse-engineered protocol can be investigated.</li>
+  </ul>
+  <p>Your device's own backup (Google or iCloud) may include this data, under
+  the terms of that backup service.</p>
+
+  <h2>What leaves your phone</h2>
+  <ul>
+    <li><strong>Your watch.</strong> On Android, battery status is sent to your
+    paired Wear OS watch through Google Play services' Wear Data Layer. On iOS,
+    widgets read a copy that stays on the phone.</li>
+    <li><strong>Diagnostics you choose to share.</strong> Settings → Diagnostics
+    can export a report. It is sent only when you share it, to whoever you pick
+    in your phone's share sheet.</li>
+    <li><strong>Test builds.</strong> Pre-release builds distributed outside the
+    app stores check the Service Provider's update server for newer builds.
+    That check sends the installed build number and the app's identifier, and
+    nothing about your bikes. Builds from Google Play or the App Store do not
+    make this check.</li>
+  </ul>
+  <p>Notifications are scheduled and shown on your device; nothing is sent to
+  a server to produce them.</p>
+
+  <h2>Third-party services</h2>
+  <p>The Application relies on these services from your device's platform,
+  which have their own privacy policies:</p>
+  <ul>
+    <li><a href="https://www.google.com/policies/privacy/">Google Play Services</a>
+    (Wear OS sync, Android only)</li>
+    <li><a href="https://www.apple.com/legal/privacy/">Apple</a> (iOS widgets and
+    notifications)</li>
+  </ul>
+  <p>The Service Provider does not share or sell your information, because it
+  never receives it. The only exception is a diagnostics report or bug report
+  you choose to send; it is used only to fix the problem it describes.</p>
+
+  <h2>Deleting your data</h2>
+  <p>Removing a bike in Settings deletes it and its history. Uninstalling the
+  Application deletes everything it stored on your devices. If you have sent a
+  diagnostics report and want it deleted, contact
+  <a href="mailto:drew@thescavengers.software">drew@thescavengers.software</a>.</p>
+
+  <h2>Children</h2>
+  <p>The Application does not address anyone under the age of 13, and the
+  Service Provider does not knowingly collect personal information from
+  children. If you believe a child has sent the Service Provider personal
+  information, contact
+  <a href="mailto:drew@thescavengers.software">drew@thescavengers.software</a> and it
+  will be deleted.</p>
+
+  <h2>Changes</h2>
+  <p>This Privacy Policy may be updated from time to time. Changes are posted
+  on this page with a new effective date, and the Application's source history
+  is public at
+  <a href="https://github.com/r0adkll/cassette">github.com/r0adkll/cassette</a>.</p>
+
+  <h2>Contact Us</h2>
+  <p>If you have any questions about privacy while using the Application,
+  contact the Service Provider at
+  <a href="mailto:drew@thescavengers.software">drew@thescavengers.software</a>.</p>
+</main>
+
+<footer>
+  <div class="bar">
+    <span>© 2026 The Scavenger's Software LLC</span>
+    <span><a href="/cassette/terms.html">Terms &amp; Conditions</a> · <a href="/">thescavengers.software</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
