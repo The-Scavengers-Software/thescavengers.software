@@ -132,7 +132,10 @@
     as free memory, and a random identifier Crashlytics creates for the
     installation to count how many installations a crash affects. It holds
     nothing about your bikes or their components, and not your location, name
-    or contact details. Crash reports are on by default; turn them off in
+    or contact details. While crash reports are on, the Application also sends
+    a short note when it starts (the app's version, your device's model and
+    operating system, and the same installation identifier), so Crashlytics can
+    work out how often it crashes. Crash reports are on by default; turn them off in
     Settings → About → Send crash reports, which also deletes any report not yet
     sent. The Wear OS and Apple Watch apps don't send crash reports.</li>
   </ul>
